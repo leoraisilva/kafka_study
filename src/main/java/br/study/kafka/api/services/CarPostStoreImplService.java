@@ -3,9 +3,11 @@ package br.study.kafka.api.services;
 import br.study.kafka.api.clients.CarPostStoreClient;
 import br.study.kafka.api.dto.CarPostDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CarPostStoreImplService implements CarPostStoreService{
 
     @Autowired
