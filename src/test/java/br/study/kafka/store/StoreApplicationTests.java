@@ -1,10 +1,10 @@
-package br.study.kafka.api;
+package br.study.kafka.store;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApiApplicationTests {
+class StoreApplicationTests {
 
 	@Test
 	void contextLoads() {
