@@ -14,14 +14,14 @@ import java.util.Objects;
 @Component
 public class CarPostStoreClient {
 
-    private final String USER_STORE_SERVICE_URL = "http://localhost:8080/api/v1/user";
-    private final String POSTS_STORE_SERVICE_URL = "http://localhost:8080/api/v1/sales";
+    private final String USER_STORE_SERVICE_URL = "http://localhost:8084/api/v1/user";
+    private final String POSTS_STORE_SERVICE_URL = "http://localhost:8084/api/v1/sales";
 
     @Autowired
     RestTemplate restTemplate;
 
     public List<CarPostDTO> getCarPostsClient() {
-        ResponseEntity<CarPostDTO[]> responseEntity = restTemplate.getForEntity(POSTS_STORE_SERVICE_URL+"/car/", CarPostDTO[].class);
+        ResponseEntity<CarPostDTO[]> responseEntity = restTemplate.getForEntity(POSTS_STORE_SERVICE_URL + "/car", CarPostDTO[].class);
         return Arrays.asList(Objects.requireNonNull(responseEntity.getBody()));
     }
 
